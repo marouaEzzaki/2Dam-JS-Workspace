@@ -36,16 +36,37 @@ console.log(data.abilities[0].ability.name) // <-- [{}, {}, {}]
 console.log(data.abilities[1].ability.name) // <-- [{}, {}, {}]
 console.log(data.abilities[2].ability.name) // <-- [{}, {}, {}]
 */
+/*
+3.1
 info.abilities.push(data.abilities[0].ability.name)
 info.abilities.push(data.abilities[1].ability.name)
 info.abilities.push(data.abilities[2].ability.name)
+**/
+// 3.2
+for (let i = 0; i < data.abilities.length; i++) {
+  info.abilities.push(data.abilities[i].ability.name)
+}
 
-console.log(info.abilities)
+// console.log(info.abilities)
 
 // 4. Modifica el array abilities del objeto info para que ahora contenga
 // tres subarrays, formados por el nombre y la URL
 // Borra la propiedad abilties y vuelvela a crear dinamicamente
 
+console.log(data.abilities[0].ability)
+
+console.log(Object.values(data.abilities[0].ability))
+console.log(Object.values(data.abilities[1].ability))
+console.log(Object.values(data.abilities[2].ability))
+
+let abilities = []
+
+abilities.push(Object.values(Object.values(data.abilities[0].ability))
+abilities.push(Object.values(Object.values(data.abilities[1].ability))
+abilities.push(Object.values(Object.values(data.abilities[2].ability))
+
+info.abilities = abilities
+console.log(info)
 // 5. Usa el operado spread (...) para agregar al array vacio de game_indices de info
 // los datos contenidos en game_indices del json
 
