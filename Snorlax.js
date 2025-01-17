@@ -14,7 +14,7 @@ const data = JSON.parse(dataJson)
 const info = {
   abilities: [],
   game_indices: [],
-  held_itemns: [],
+  held_items: [],
   moves: [],
   stats: []
 }
@@ -22,11 +22,25 @@ const info = {
 // 2. Del JSON, imprime por pantalla las mismas claves que has utilizado
 // al crear tu objeto info
 
-console.log(Object.keys(data))
+// console.log(data.abilities)
+// console.log(data.game_indices)
+// console.log(data.held_items)
+/// console.log(data.moves)
 
 // 3. Agrega al array vacio de abilities el nombre de las habilidades contenidas en el JSON.
 // 3.1. Accede manualmente a los 3 nombres y haz un push al array vacio
 // 3.2. Modifica el acceso manual para que ahora utilices un for para hacer push a los 3 nombres
+
+/*
+console.log(data.abilities[0].ability.name) // <-- [{}, {}, {}]
+console.log(data.abilities[1].ability.name) // <-- [{}, {}, {}]
+console.log(data.abilities[2].ability.name) // <-- [{}, {}, {}]
+*/
+info.abilities.push(data.abilities[0].ability.name)
+info.abilities.push(data.abilities[1].ability.name)
+info.abilities.push(data.abilities[2].ability.name)
+
+console.log(info.abilities)
 
 // 4. Modifica el array abilities del objeto info para que ahora contenga
 // tres subarrays, formados por el nombre y la URL
