@@ -45,10 +45,10 @@ function getGameNames (imprimirCallback) {
 }
 
 const imprimirCallback = function (names) {
-  for (let i = 0; i < names.length; i++) {
-    console.log(names[i])
-  }
+  console.log(names)
 }
+
+getGameNames(imprimirCallback)
 
 // 3. Arrow Function para calcular la altura (Revisar Tema 3.5 Pagina 11)
 
